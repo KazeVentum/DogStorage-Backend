@@ -38,4 +38,10 @@ public class  Proveedor implements Serializable {
 
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion;
+
+    @OneToMany(mappedBy = "proveedor", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<Pedido> pedidos;
+
+    @OneToMany(mappedBy = "proveedor", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<MovimientoInventario> movimientosInventario;
 }

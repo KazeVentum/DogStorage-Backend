@@ -40,6 +40,15 @@ public class Ubicacion implements Serializable {
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion;
 
+    @OneToMany(mappedBy = "ubicacion", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<Inventario> inventarios;
+
+    @OneToMany(mappedBy = "ubicacionOrigen", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<MovimientoInventario> movimientosOrigen;
+
+    @OneToMany(mappedBy = "ubicacionDestino", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<MovimientoInventario> movimientosDestino;
+
     public enum TipoUbicacion {
         almacen_central, sede, proveedor
     }

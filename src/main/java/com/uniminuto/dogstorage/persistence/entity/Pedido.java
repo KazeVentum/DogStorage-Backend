@@ -37,7 +37,7 @@ public class Pedido implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "estado")
-    private final EstadoPedido estado = EstadoPedido.pendiente;
+    private EstadoPedido estado = EstadoPedido.pendiente;
 
     @Column(name = "subtotal", precision = 12, scale = 2)
     private BigDecimal subtotal;
@@ -53,6 +53,9 @@ public class Pedido implements Serializable {
 
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion;
+
+    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<DetallePedido> detallesPedido;
 
     public enum EstadoPedido {
         pendiente, confirmado, en_transito, entregado, cancelado

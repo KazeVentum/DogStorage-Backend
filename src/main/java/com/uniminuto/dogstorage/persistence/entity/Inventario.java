@@ -28,13 +28,13 @@ public class Inventario implements Serializable {
     private Ubicacion ubicacion;
 
     @Column(name = "cantidad_bultos", nullable = false)
-    private final Integer cantidadBultos = 0;
+    private Integer cantidadBultos = 0;
 
     @Column(name = "stock_minimo")
-    private final Integer stockMinimo = 5;
+    private Integer stockMinimo = 5;
 
     @Column(name = "stock_maximo")
-    private final Integer stockMaximo = 50;
+    private Integer stockMaximo = 50;
 
     @Column(name = "fecha_actualizacion")
     private LocalDateTime fechaActualizacion;

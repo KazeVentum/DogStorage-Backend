@@ -51,6 +51,12 @@ public class Producto implements Serializable {
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion;
 
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<Inventario> inventarios;
+
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<DetallePedido> detallesPedido;
+
     public enum EdadPerro {
         cachorro, adulto, senior, todas
     }

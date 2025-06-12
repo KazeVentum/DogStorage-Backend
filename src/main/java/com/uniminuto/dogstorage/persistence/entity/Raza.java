@@ -26,6 +26,9 @@ public class Raza implements Serializable {
     @Column(name = "activo")
     private final Boolean activo = true;
 
+    @OneToMany(mappedBy = "raza", cascade = CascadeType.ALL, orphanRemoval = true)
+    private java.util.List<Producto> productos;
+
     public enum TamanoRaza {
         pequeño, mediano, grande, gigante
     }

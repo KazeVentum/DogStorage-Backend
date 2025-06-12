@@ -29,7 +29,7 @@ public class DetallePedido implements Serializable {
     private Integer cantidadSolicitada;
 
     @Column(name = "cantidad_recibida")
-    private final Integer cantidadRecibida = 0;
+    private Integer cantidadRecibida = 0;
 
     @Column(name = "precio_unitario", nullable = false, precision = 10, scale = 2)
     private BigDecimal precioUnitario;
