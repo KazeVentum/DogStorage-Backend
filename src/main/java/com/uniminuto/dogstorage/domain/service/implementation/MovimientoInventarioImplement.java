@@ -1,7 +1,7 @@
 package com.uniminuto.dogstorage.domain.service.implementation;
 
 import java.util.List;
-import javax.persistence.EntityNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 import com.uniminuto.dogstorage.domain.repository.MovimientoInventarioRepository;
 import com.uniminuto.dogstorage.domain.service.interfaces.MovimientoInventarioInterface;
 import com.uniminuto.dogstorage.persistence.entity.MovimientoInventario;

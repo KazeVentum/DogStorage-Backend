@@ -2,7 +2,7 @@ package com.uniminuto.dogstorage.persistence.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.Data;
 

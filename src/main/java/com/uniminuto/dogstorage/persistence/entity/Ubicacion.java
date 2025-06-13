@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "ubicaciones")

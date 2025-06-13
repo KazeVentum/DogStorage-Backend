@@ -3,8 +3,8 @@ package com.uniminuto.dogstorage.persistence.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import javax.persistence.*;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity

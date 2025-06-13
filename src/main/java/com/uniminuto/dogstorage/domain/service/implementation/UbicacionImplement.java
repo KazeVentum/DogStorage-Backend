@@ -2,7 +2,7 @@ package com.uniminuto.dogstorage.domain.service.implementation;
 
 import java.util.List;
 
-import javax.persistence.EntityNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 
 import com.uniminuto.dogstorage.domain.repository.UbicacionRepository;
 import com.uniminuto.dogstorage.domain.service.interfaces.UbicacionInterface;
